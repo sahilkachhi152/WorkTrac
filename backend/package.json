@@ -22,6 +22,7 @@
     "json2csv": "^6.0.0-alpha.2",
     "jsonwebtoken": "^9.0.3",
     "pdfkit": "^0.19.1",
+     "better-sqlite3": "^11.0.0",
     "sequelize": "^6.37.8",
     "sqlite3": "^6.0.1",
     "uuid": "^14.0.1"

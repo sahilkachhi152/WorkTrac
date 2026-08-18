@@ -1,0 +1,453 @@
+/* =====================================================
+   EMPLOYEE LAYOUT
+===================================================== */
+
+.employee-layout {
+    min-height: 100vh;
+    background: #f4f6f9;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =====================================================
+   EMPLOYEE HEADER
+===================================================== */
+
+.employee-header {
+    height: 60px;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.employee-logo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.employee-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.employee-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.employee-logout-btn {
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.employee-logout-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* =====================================================
+   EMPLOYEE CONTENT
+===================================================== */
+
+.employee-content {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 80px; /* Space for bottom nav */
+}
+
+/* =====================================================
+   EMPLOYEE BOTTOM NAVIGATION
+===================================================== */
+
+.employee-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10px;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.employee-nav-item {
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex: 1;
+    max-width: 80px;
+}
+
+.employee-nav-icon {
+    font-size: 22px;
+}
+
+.employee-nav-label {
+    font-size: 11px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.employee-nav-item.active {
+    background: #eff6ff;
+}
+
+.employee-nav-item.active .employee-nav-label {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* =====================================================
+   EMPLOYEE DASHBOARD
+===================================================== */
+
+.employee-dashboard {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.employee-welcome {
+    margin-bottom: 25px;
+}
+
+.employee-welcome h1 {
+    font-size: 24px;
+    color: #111827;
+    margin: 0;
+}
+
+.employee-welcome p {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 5px 0 0;
+}
+
+.employee-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.employee-stat-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.employee-stat-card span {
+    display: block;
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.employee-stat-card strong {
+    display: block;
+    font-size: 28px;
+    color: #111827;
+}
+
+.employee-stat-card .present-number {
+    color: #16a34a;
+}
+
+.employee-stat-card .absent-number {
+    color: #dc2626;
+}
+
+.employee-stat-card .pending-number {
+    color: #d97706;
+}
+
+/* =====================================================
+   EMPLOYEE ATTENDANCE PAGE
+===================================================== */
+
+.employee-attendance-page {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.employee-attendance-page h1 {
+    font-size: 22px;
+    color: #111827;
+    margin: 0 0 5px;
+}
+
+.employee-attendance-page p {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 0 0 20px;
+}
+
+.employee-attendance-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    margin-bottom: 20px;
+}
+
+.employee-attendance-card h2 {
+    font-size: 18px;
+    color: #111827;
+    margin: 0 0 5px;
+}
+
+.employee-attendance-card p {
+    color: #6b7280;
+    font-size: 13px;
+    margin: 0 0 20px;
+}
+
+.employee-btn-primary {
+    width: 100%;
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.employee-btn-primary:hover:not(:disabled) {
+    background: #1d4ed8;
+}
+
+.employee-btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.employee-btn-success {
+    background: #16a34a;
+}
+
+.employee-btn-success:hover:not(:disabled) {
+    background: #15803d;
+}
+
+.employee-btn-danger {
+    background: #dc2626;
+}
+
+.employee-btn-danger:hover:not(:disabled) {
+    background: #b91c1c;
+}
+
+.employee-attendance-status {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.employee-status-present {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.employee-status-absent {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.employee-status-outside {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.employee-gps-info {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin: 15px 0;
+    font-size: 13px;
+    color: #475569;
+}
+
+.employee-gps-info strong {
+    color: #0f172a;
+}
+
+/* =====================================================
+   EMPLOYEE LEAVES PAGE
+===================================================== */
+
+.employee-leaves-page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.employee-leaves-page h1 {
+    font-size: 22px;
+    color: #111827;
+    margin: 0 0 5px;
+}
+
+.employee-leaves-page p {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 0 0 20px;
+}
+
+.employee-leave-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.employee-leave-card h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+    color: #111827;
+}
+
+.employee-leave-card .leave-date {
+    color: #6b7280;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.employee-leave-card .leave-reason {
+    color: #374151;
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+/* =====================================================
+   EMPLOYEE PROFILE PAGE
+===================================================== */
+
+.employee-profile-page {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.employee-profile-page h1 {
+    font-size: 22px;
+    color: #111827;
+    margin: 0 0 20px;
+}
+
+.employee-profile-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.employee-profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 auto 15px;
+}
+
+.employee-profile-card h2 {
+    text-align: center;
+    margin: 0 0 5px;
+    font-size: 20px;
+    color: #111827;
+}
+
+.employee-profile-card .profile-email {
+    text-align: center;
+    color: #6b7280;
+    font-size: 14px;
+    margin: 0 0 20px;
+}
+
+.profile-detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.profile-detail:last-child {
+    border-bottom: none;
+}
+
+.profile-detail span:first-child {
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.profile-detail span:last-child {
+    color: #111827;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* =====================================================
+   EMPLOYEE RESPONSIVE
+===================================================== */
+
+@media (max-width: 480px) {
+    .employee-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .employee-name {
+        display: none;
+    }
+    
+    .employee-content {
+        padding: 15px;
+        padding-bottom: 75px;
+    }
+    
+    .employee-welcome h1 {
+        font-size: 20px;
+    }
+}
